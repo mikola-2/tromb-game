@@ -5,7 +5,6 @@ using UnityEngine;
 public class leftMove : MonoBehaviour {
 	public GameObject mainChar;
 	public Rigidbody2D body;
-	public bool isMove;
 
 	void Start () {
 		body = mainChar.GetComponent<Rigidbody2D> ();
@@ -13,13 +12,8 @@ public class leftMove : MonoBehaviour {
 
 	void OnMouseOver(){
 		if(Input.GetMouseButtonDown(0)){
-			if (isMove == false) {
-				body.AddForce (new Vector2 (-100, 0));
-				isMove = true;
-			} else {
-				body.AddForce (new Vector2 (-200, 0));
-				isMove = false;
-			}
+			body.velocity = Vector2.zero;
+			body.AddForce (new Vector2 (-100, 0));
 		}
 	}
 }
