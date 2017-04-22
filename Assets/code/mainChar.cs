@@ -5,8 +5,10 @@ using UnityEngine;
 public class mainChar : MonoBehaviour {
 	public Rigidbody2D body;
 	public float speed = 5f;
-	public float mousePos;
-	public float charPos;
+	public Vector3 mousePos;
+	public Vector3 charPos;
+	//public float mousePos;
+	//public float charPos;
 	//public Transform body;
 
 	void Start () {
@@ -14,13 +16,6 @@ public class mainChar : MonoBehaviour {
 	}
 
 	void Update () {
-	if(Input.GetMouseButtonDown(0)){
-			//if (Input.mousePosition.x > body.transform.position.x) {
-			//	body.AddForce (new Vector2(100, 0));
-			//} else {
-			//	body.AddForce (new Vector2(-100, 0));
-			//}
-		}
-	}
 		
 	}
+}

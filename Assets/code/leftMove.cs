@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class leftMove : MonoBehaviour {
-//	public Rigidbody2D body;
+	public GameObject mainChar;
+	public Rigidbody2D body;
+	public bool isMove;
 
 	void Start () {
-	//	body = GetComponent<Rigidbody2D> ();
+		body = mainChar.GetComponent<Rigidbody2D> ();
 	}
 
 	void OnMouseOver(){
-	//	if(Input.GetMouseButtonDown(0)){
-		//	body.AddForce (new Vector2(-100, 0));			
-	//	}
+		if(Input.GetMouseButtonDown(0)){
+			if (isMove == false) {
+				body.AddForce (new Vector2 (-100, 0));
+				isMove = true;
+			} else {
+				body.AddForce (new Vector2 (-200, 0));
+				isMove = false;
+			}
+		}
 	}
 }
