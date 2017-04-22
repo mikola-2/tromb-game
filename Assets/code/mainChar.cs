@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class mainChar : MonoBehaviour {
-	public GameObject Character;
-	public Rigidbody2D body;
+	public Animator anim;
 
-
-	void Start () {
-		//body = Character.GetComponent<Rigidbody2D> ();
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "food"){
+			col.gameObject.transform.parent = this.gameObject.transform;
+			anim = col.gameObject.GetComponent<Animator> ();
+			anim.enabled = false;
+		}
 	}
-		
-
 }
