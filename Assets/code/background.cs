@@ -6,8 +6,8 @@ public class background:MonoBehaviour{
 
 	void Update(){
 		transform.Translate (new Vector3(0f, speed, 0f));
-		if(transform.position.y < -9.5f){
-			transform.position = new Vector3 (0f, 9.5f, 1f);
+		if(transform.position.y < -5f){
+			transform.position = new Vector3 (0f, 7.3f, 1f);
 		}
 	}
 

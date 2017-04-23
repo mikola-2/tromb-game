@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class foodCreator : MonoBehaviour {
 	public GameObject prefabFood;
-	public Animator anim;
+	public GameObject prefabEnemy;
 	int respIndex = 0;
-	int respIntTime = 90;
-	//public Animation[] animations = new Animation[5];
-	int animMove;
+	int respIntTime = 10;
+	int a = 1;
 
-	void Start () {
-		anim = GetComponent<Animator> ();
-	}
 
 	void Update () {
 		respIndex++;
-		//int sw = Screen.width;
-		//int sh = Screen.height;
-		Vector3 pos = /*Camera.main.ViewportToWorldPoint (*/new Vector3(0+Random.Range(-4, 4), 6, 0);
-		if(respIndex>=respIntTime){
+		Vector3 posF = new Vector3(0+Random.Range(-1f, 1f), 6, 0);
+		Vector3 posE = new Vector3(0+Random.Range(-1f, 1f), 6, 0);
+		if(respIndex==respIntTime){
 			respIndex = 0;
-			GameObject food = Instantiate (prefabFood, pos, transform.rotation);
-			anim = food.GetComponent<Animator> ();
-			anim.enabled = true;
-			//anim.applyRootMotion = false;
+			respIntTime = 0;
+			var randomTimeRespawn =Random.Range (5, 20);
+			var randomTypeItem =Random.Range (0, 99)%2;
+			respIntTime = 10 + randomTimeRespawn;
+			if (a == randomTypeItem ) {
+				/*GameObject food = */Instantiate (prefabFood, posF, transform.rotation);
+			} else {
+				/*GameObject enemy = */Instantiate (prefabEnemy, posE, transform.rotation);
+			}
 		}
 	}
 }
