@@ -12,6 +12,8 @@ public class mainChar : MonoBehaviour {
 
 	void Start(){
 		PlayerPrefs.SetInt ("foodScore", score);
+		//PlayerPrefs.SetInt ("checkWin", 0);
+		Cursor.visible = false;
 	}
 
 
@@ -20,20 +22,23 @@ public class mainChar : MonoBehaviour {
 			col.gameObject.transform.parent = this.gameObject.transform;
 			col.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + Random.Range(-0.5f, 0.5f), this.gameObject.transform.position.y + Random.Range(0f,0.5f), this.gameObject.transform.position.z);
 			foodScore = PlayerPrefs.GetInt ("foodScore");
-			if (foodScore < 10) {
+			if (foodScore < foodCreator.winNum) {
 				foodScore++;
 				PlayerPrefs.SetInt ("foodScore", foodScore);
-				Debug.Log("XXX  Char + Food: "+foodScore);
+			}
+			PlaySound (nyam);	
+		}
+		if(col.gameObject.tag == "superFood"){
+			col.gameObject.transform.parent = this.gameObject.transform;
+			col.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + Random.Range(-0.5f, 0.5f), this.gameObject.transform.position.y + Random.Range(0f,0.5f), this.gameObject.transform.position.z);
+			foodScore = PlayerPrefs.GetInt ("foodScore");
+			if (foodScore < foodCreator.winNum) {
+				foodScore = foodScore+3;
+				PlayerPrefs.SetInt ("foodScore", foodScore);
 			}
 			PlaySound (nyam);	
 		}
 		if (col.gameObject.tag == "enemy") {
-			//foodScore = PlayerPrefs.GetInt ("foodScore");
-			//if(foodScore != 0){
-			//	foodScore--;
-			//PlayerPrefs.SetInt ("foodScore", foodScore);
-			//	Debug.Log("XXX  Char + Enemy: "+foodScore);
-			//}
 			PlaySound (fail);	
 		}
 	}

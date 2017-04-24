@@ -25,19 +25,18 @@ public class foodMove : MonoBehaviour {
 			if (foodScore != 0) {
 				foodScore--;
 				PlayerPrefs.SetInt ("foodScore", foodScore);
-				Debug.Log("OOO  Food + Enemy: "+foodScore);
 
+			}
+			if(this.gameObject.tag == "superFood"){
+				if (foodScore != 0) {
+					foodScore = foodScore - 3;
+					PlayerPrefs.SetInt ("foodScore", foodScore);
+
+				}
 			}
 		}
 		if((col.gameObject.name == "mainChar")||(col.gameObject.tag == "food")){
 			inTrig = true;
-			//if(col.gameObject.tag == "food"){
-			//foodScore = PlayerPrefs.GetInt ("foodScore");
-				//if (foodScore < 10) {
-				//	foodScore++;
-				//	PlayerPrefs.SetInt ("foodScore", foodScore);
-				//}
-			//}
 		}
 	}
 }

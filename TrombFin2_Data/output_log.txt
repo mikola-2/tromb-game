@@ -1,0 +1,77 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 3000 (ID=0x116)
+    Vendor:   Intel
+    VRAM:     1072 MB
+    Driver:   9.17.10.4229
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.040 seconds
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\my game\unity\SourceTrombGit\tromb-game\TrombFin2_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.375863 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.074541 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 266.
+Total: 1.886509 ms (FindLiveObjects: 0.038252 ms CreateObjectMapping: 0.053180 ms MarkObjects: 0.157675 ms  DeleteObjects: 1.636467 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.458565 ms
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 323.
+Total: 1.086468 ms (FindLiveObjects: 0.025190 ms CreateObjectMapping: 0.032654 ms MarkObjects: 0.198727 ms  DeleteObjects: 0.828963 ms)
+
+XXX  Char + Food: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+XXX  Char + Food: 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 67c -> priority: 1 

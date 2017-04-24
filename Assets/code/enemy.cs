@@ -17,7 +17,7 @@ public class enemy : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D col){
-		if((col.gameObject.name == "mainChar")||(col.gameObject.tag == "food")){
+		if((col.gameObject.name == "mainChar")||(col.gameObject.tag == "food")||(col.gameObject.tag == "superFood")){
 			inTrig = true;
 			Destroy (this.gameObject);
 		}

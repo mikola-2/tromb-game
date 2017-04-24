@@ -7,6 +7,10 @@ public class playBut : MonoBehaviour {
 	public GameObject playButton;
 	public Sprite[] sprites = new Sprite[2];
 
+	void Start(){
+		Cursor.visible = true;
+	}
+
 	void OnMouseEnter(){
 		playButton.GetComponent<SpriteRenderer> ().sprite = sprites [0];
 	}
