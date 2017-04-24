@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class mainChar : MonoBehaviour {
 	public int score = 0;
@@ -22,15 +23,17 @@ public class mainChar : MonoBehaviour {
 			if (foodScore < 10) {
 				foodScore++;
 				PlayerPrefs.SetInt ("foodScore", foodScore);
+				Debug.Log("XXX  Char + Food: "+foodScore);
 			}
 			PlaySound (nyam);	
 		}
 		if (col.gameObject.tag == "enemy") {
-			foodScore = PlayerPrefs.GetInt ("foodScore");
-			if(foodScore != 0){
-				foodScore--;
-			PlayerPrefs.SetInt ("foodScore", foodScore);
-			}
+			//foodScore = PlayerPrefs.GetInt ("foodScore");
+			//if(foodScore != 0){
+			//	foodScore--;
+			//PlayerPrefs.SetInt ("foodScore", foodScore);
+			//	Debug.Log("XXX  Char + Enemy: "+foodScore);
+			//}
 			PlaySound (fail);	
 		}
 	}

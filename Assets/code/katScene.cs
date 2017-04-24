@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(AudioSource))]
+//[RequireComponent(typeof(AudioSource))]
 
 public class katScene : MonoBehaviour {
-	public MovieTexture vid;
+	public MovieTexture movie;
 	public AudioSource sound;
 
 	void Start () {
-		GetComponent<RawImage>().texture = vid as MovieTexture;
+		GetComponent<RawImage>().texture = movie as MovieTexture;
 		sound = GetComponent<AudioSource>();
-		sound.clip = vid.audioClip;
+		sound.clip = movie.audioClip;
 
-		vid.Play ();
+		movie.Play();
 		sound.Play ();	}
 
 	void Update () {
-		if(vid.isPlaying){
-			vid.Stop ();
-			sound.Stop ();
+		if(!movie.isPlaying){
+			SceneManager.LoadScene ("menu");
 		}
 	}
 }

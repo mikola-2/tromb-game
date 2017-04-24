@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class foodMove : MonoBehaviour {
 	public GameObject creator;
@@ -24,17 +25,19 @@ public class foodMove : MonoBehaviour {
 			if (foodScore != 0) {
 				foodScore--;
 				PlayerPrefs.SetInt ("foodScore", foodScore);
+				Debug.Log("OOO  Food + Enemy: "+foodScore);
+
 			}
 		}
 		if((col.gameObject.name == "mainChar")||(col.gameObject.tag == "food")){
 			inTrig = true;
-			if(col.gameObject.tag == "food"){
-			foodScore = PlayerPrefs.GetInt ("foodScore");
-				if (foodScore < 10) {
-					foodScore++;
-					PlayerPrefs.SetInt ("foodScore", foodScore);
-				}
-			}
+			//if(col.gameObject.tag == "food"){
+			//foodScore = PlayerPrefs.GetInt ("foodScore");
+				//if (foodScore < 10) {
+				//	foodScore++;
+				//	PlayerPrefs.SetInt ("foodScore", foodScore);
+				//}
+			//}
 		}
 	}
 }

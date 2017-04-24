@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class foodCreator : MonoBehaviour {
 	public GameObject prefabFood;
@@ -10,11 +11,11 @@ public class foodCreator : MonoBehaviour {
 	int respIndex = 0;
 	int respIntTime = 10;
 	int a = 1;
-	public int index;
-	public int allTromb;
+	public int countAddedFood;
+	public int winNum;
 
 	void Start(){
-		allTromb = 10;
+		winNum = 10;
 	}
 
 	void Update () {
@@ -33,7 +34,11 @@ public class foodCreator : MonoBehaviour {
 				Instantiate (prefabEnemy, posE, transform.rotation);
 			}
 		}
-		index = PlayerPrefs.GetInt ("foodScore");
-		scoreText.text = index + "/" + allTromb;
+		countAddedFood = PlayerPrefs.GetInt ("foodScore");
+		scoreText.text = countAddedFood + "/" + winNum;
+		Debug.Log(">>> Count : "+countAddedFood);
+		if (countAddedFood == winNum) {
+			SceneManager.LoadScene ("endVideo");
+		}
 	}
 }
