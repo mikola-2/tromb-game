@@ -1,14 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class foodCreator : MonoBehaviour {
 	public GameObject prefabFood;
 	public GameObject prefabEnemy;
+	public Text scoreText;
 	int respIndex = 0;
 	int respIntTime = 10;
 	int a = 1;
+	public int index;
+	public int allTromb;
 
+	void Start(){
+		allTromb = 10;
+	}
 
 	void Update () {
 		respIndex++;
@@ -21,10 +28,12 @@ public class foodCreator : MonoBehaviour {
 			var randomTypeItem =Random.Range (0, 99)%2;
 			respIntTime = 10 + randomTimeRespawn;
 			if (a == randomTypeItem ) {
-				/*GameObject food = */Instantiate (prefabFood, posF, transform.rotation);
+				Instantiate (prefabFood, posF, transform.rotation);
 			} else {
-				/*GameObject enemy = */Instantiate (prefabEnemy, posE, transform.rotation);
+				Instantiate (prefabEnemy, posE, transform.rotation);
 			}
 		}
+		index = PlayerPrefs.GetInt ("foodScore");
+		scoreText.text = index + "/" + allTromb;
 	}
 }

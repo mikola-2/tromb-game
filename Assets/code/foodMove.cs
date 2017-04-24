@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class foodMove : MonoBehaviour {
 	public GameObject creator;
-	public float speed = -0.2f;
+	public float speed = -0.1f;
 	public bool inTrig = false;
 	public int foodScore;
 
@@ -17,16 +17,24 @@ public class foodMove : MonoBehaviour {
 		
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(col.gameObject.tag == "enemy"||col.gameObject.tag == "border"){
+		if(col.gameObject.tag == "enemy"){
 			this.gameObject.transform.parent = creator.gameObject.transform;
 			Destroy (this.gameObject);
-			foodScore = PlayerPrefs.GetInt ("foodScore") - 1;
-			PlayerPrefs.SetInt ("foodScore", foodScore);
+			foodScore = PlayerPrefs.GetInt ("foodScore");
+			if (foodScore != 0) {
+				foodScore--;
+				PlayerPrefs.SetInt ("foodScore", foodScore);
+			}
 		}
 		if((col.gameObject.name == "mainChar")||(col.gameObject.tag == "food")){
 			inTrig = true;
-			foodScore = PlayerPrefs.GetInt ("foodScore") + 1;
-			PlayerPrefs.SetInt ("foodScore", foodScore);
+			if(col.gameObject.tag == "food"){
+			foodScore = PlayerPrefs.GetInt ("foodScore");
+				if (foodScore < 10) {
+					foodScore++;
+					PlayerPrefs.SetInt ("foodScore", foodScore);
+				}
+			}
 		}
 	}
 }

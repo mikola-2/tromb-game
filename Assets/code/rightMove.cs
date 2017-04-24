@@ -12,7 +12,6 @@ public class rightMove : MonoBehaviour {
 
 	void OnMouseOver(){
 		if (Input.GetMouseButtonDown (0)) {
-			//body.AddForce (new Vector2 (0, 0));
 			body.velocity = Vector2.zero;
 			body.AddForce (new Vector2(100, 0));
 		}
